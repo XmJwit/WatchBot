@@ -1,6 +1,10 @@
 /** Telegram机器人的Token */
-const token = '机器人Token';
-const robotName = '@xxxx';
+const fs666 = require("fs");
+let rawdata = fs666.readFileSync('/bot/bot.json');
+let botConfig = JSON.parse(rawdata);
+const token = botConfig.token;
+const robotName = botConfig.robotName;
+
 
 
 
