@@ -1,4 +1,4 @@
-FROM node:14 as build
+FROM node:9 as build
 
 WORKDIR /app
 
@@ -6,7 +6,7 @@ COPY index.js bot.json package.json pm2.json ./
 
 RUN npm install
 
-FROM node:8-alpine
+FROM node:9-alpine
 
 COPY --from=build /app /
 
