@@ -2,7 +2,7 @@
 Watch Online
 
 # Deploy
-Create File /bot/
+Create File `/bot/bot.json` , fill in your config
 
 ```
 docker run -d \
