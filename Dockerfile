@@ -6,7 +6,7 @@ COPY index.js bot.json package.json pm2.json ./
 
 RUN npm install
 
-FROM gcr.io/distroless/nodejs
+FROM node:8-alpine
 
 COPY --from=build /app /
 
