@@ -1,13 +1,9 @@
-FROM node:9 as build
+FROM node:10-alpine
+
+ADD . /app
 
 WORKDIR /app
 
-COPY index.js bot.json package.json pm2.json ./
-
 RUN npm install
-
-FROM node:9-alpine
-
-COPY --from=build /app /
 
 CMD ["pm2", "start pm2.json"]
